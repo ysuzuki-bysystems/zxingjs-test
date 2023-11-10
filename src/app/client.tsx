@@ -30,6 +30,7 @@ async function scan(video: HTMLVideoElement, signal: AbortSignal, callback: (tex
       BarcodeFormat.CODE_39,
       BarcodeFormat.CODE_93,
       BarcodeFormat.CODE_128,
+      BarcodeFormat.ITF,
     ]],
   ]);
 
