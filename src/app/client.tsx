@@ -67,7 +67,7 @@ export function Client() {
   const [active, setActive] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [detects, addDetects] = useReducer((state: string[], [text, points]: [string, ResultPoint[]]) => {
-    return [`${text} (${points.map(v => `${v.getX()},${v.getY()}`).join(",")})`, ...state.slice(0, 9)];
+    return [`${new Date().toISOString()} ${text} (${points.map(v => `${v.getX()},${v.getY()}`).join(",")})`, ...state.slice(0, 9)];
   }, []);
 
   useEffect(() => {
