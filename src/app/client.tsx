@@ -90,7 +90,7 @@ export function Client() {
       <button onClick={() => setActive(!active)}>{!active ? "play" : "stop"}</button>
     </div>
     <div style={{ width: 640, height: 640, objectFit: "contain" }}>
-      <video ref={videoRef} autoPlay={false} />
+      <video ref={videoRef} autoPlay={false} playsInline={true} muted={true} />
     </div>
     <pre>
       {detects.join("\n")}
